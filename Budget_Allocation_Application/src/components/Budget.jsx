@@ -10,6 +10,9 @@ const Budget = () => {
     const handleBudgetChange = (e) => {
         setNewBudget(e.target.value);
     }
+
+    const newSetting = 9;
+    
     const handleKeyDown = (e) => {
         if ( e.key === 'Enter' && newBudget <= upperLimitValue) {
           dispatch({ type: "SET_BUDGET", payload: newBudget });
